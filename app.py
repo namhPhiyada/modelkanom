@@ -29,17 +29,17 @@ if uploaded_file is not None:
     st.write("Detecting...")
     # result = model(imgRGB, size=600)
 
-    # detect_class = result.pandas().xyxy[0]
+    detect_class = result.pandas().xyxy[0]
 
-    # detect_class['name'] = detect_class['name'].map({'Darathong': 'Darathong',
-    #                                                  'SaneCharn': 'SaneCharn',
-    #                                                  'ChorMuang': 'ChorMuang'})
+    detect_class['name'] = detect_class['name'].map({'Darathong': 'Darathong',
+                                                     'SaneCharn': 'SaneCharn',
+                                                     'ChorMuang': 'ChorMuang'})
 
     # Get unique names
-    # unique_names = detect_class['name'].unique()
+    unique_names = detect_class['name'].unique()
 
     # Display the unique names without numbers
-    # st.write("Names:")
+    st.write("Names:")
     # for name in unique_names:
     #     if name == 'Darathong':
     #         st.text('TH: ดาราทอง  EN: Darathong')
