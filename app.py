@@ -16,7 +16,7 @@ st.write("Upload your Image...")
 # model = torch.hub.load('ultralytics/yolov5', 'custom', path='models/last.pt', force_reload=True)
 model = torch.hub.load('ultralytics/yolov5', 'custom', path='models/Model2.pt')
 
-uploaded_file = st.file_uploader("Choose .jpg pic ...", type="jpg, png")
+uploaded_file = st.file_uploader("Choose .jpg pic ...", type="jpg, png, jpeg")
 if uploaded_file is not None:
 
     file_bytes = np.asarray(bytearray(uploaded_file.read()))
