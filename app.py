@@ -41,16 +41,18 @@ if uploaded_file is not None:
     # Display the unique names without numbers
     st.write("")
     for name in unique_names:
-        if name == 'Darathong':
-            st.text('TH: ดาราทอง  EN: Darathong')
-        elif name == 'SaneCharn':
-            st.text('TH: เสน่ห์จันทร์  EN: SaneCharn')
-        elif name == 'ChorMuang':
-            st.text('TH: ช่อม่วง  EN: ChorMuang')
+         st.write(name)
+    # for name in unique_names:
+    #     if name == 'Darathong':
+    #         st.text('TH: ดาราทอง  EN: Darathong')
+    #     elif name == 'SaneCharn':
+    #         st.text('TH: เสน่ห์จันทร์  EN: SaneCharn')
+    #     elif name == 'ChorMuang':
+    #         st.text('TH: ช่อม่วง  EN: ChorMuang')
             
-        image_path = f"data/images/{name}.jpg"
-        if os.path.exists(image_path):
-            st.image(Image.open(image_path), caption='Original Image', use_column_width=True)
+    #     image_path = f"data/images/{name}.jpg"
+    #     if os.path.exists(image_path):
+    #         st.image(Image.open(image_path), caption='Original Image', use_column_width=True)
     
     # if unique_names == ['ดาราทอง (Darathong)']:
     #     st.image(Image.open("data/images/Darathong.jpg"), caption='Original Image', use_column_width=True)
